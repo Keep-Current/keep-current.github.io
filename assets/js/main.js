@@ -338,4 +338,19 @@
 
 						});
 
+		$('#contactform').on('submit', function() {
+			$.ajax({
+				type: 'POST',
+				url: 'https://keepcurrent-xprs.herokuapp.com/message',
+				data: {
+					name: $('#name').val(),
+					email: $('#email').val(),
+					message: $('#message').val()
+				},
+				success: function clear() {
+					document.getElementById('contactform').reset();
+				}
+			})
+		})
+
 })(jQuery);
