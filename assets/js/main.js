@@ -356,16 +356,11 @@
 				message: $('#message').val()
 			};
 
-			$.ajax({
-				method: 'POST',
-				url: 'https://keepcurrent-xprs.herokuapp.com/message',
-				data: JSON.stringify(msg),
-				contentType: "application/json; charset=utf-8",
- 			   	dataType: "json",
-				success: function clear() {
+			$.post('https://keepcurrent-xprs.herokuapp.com/message', JSON.stringify(msg),
+				function clear() {
 					document.getElementById('contactform').reset();
-				}
-			});
+				},
+				"json");
 
 			return false;
 		})
