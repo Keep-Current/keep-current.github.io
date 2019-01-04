@@ -357,7 +357,7 @@
 			};
 
 			$.ajax({
-				type: 'POST',
+				method: 'POST',
 				url: 'https://keepcurrent-xprs.herokuapp.com/message',
 				data: JSON.stringify(msg),
 				contentType: "application/json; charset=utf-8",
