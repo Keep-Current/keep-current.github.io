@@ -350,7 +350,9 @@
 				success: function clear() {
 					document.getElementById('contactform').reset();
 				}
-			})
+			});
+
+			return false;
 		})
 
 })(jQuery);
