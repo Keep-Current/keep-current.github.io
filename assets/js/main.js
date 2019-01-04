@@ -358,6 +358,8 @@
 					email: $('#email').val(),
 					message: $('#message').val()
 				}),
+				contentType: "application/json; charset=utf-8",
+ 			   	dataType: "json",
 				success: function clear() {
 					document.getElementById('contactform').reset();
 				}
