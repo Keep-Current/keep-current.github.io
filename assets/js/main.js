@@ -350,14 +350,16 @@
 				return false;
 			}
 
+			msg = {
+				name: $('#name').val(),
+				email: $('#email').val(),
+				message: $('#message').val()
+			};
+
 			$.ajax({
 				type: 'POST',
 				url: 'https://keepcurrent-xprs.herokuapp.com/message',
-				data: JSON.stringify({
-					name: $('#name').val(),
-					email: $('#email').val(),
-					message: $('#message').val()
-				}),
+				data: JSON.stringify(msg),
 				contentType: "application/json; charset=utf-8",
  			   	dataType: "json",
 				success: function clear() {
