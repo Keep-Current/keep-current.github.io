@@ -358,7 +358,8 @@
 
 			$.post('https://keepcurrent-xprs.herokuapp.com/message', JSON.stringify(msg),
 				function clear() {
-					document.getElementById('contactform').reset();
+
+					document.getElementById('contactform').replaceWith("<div>Thank you for contacting us! We will reply you shortly. </div>");
 				},
 				"json");
 
